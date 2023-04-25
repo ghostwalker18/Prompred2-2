@@ -157,16 +157,37 @@ main {
     display: block;
     margin-left: 20%;
     border-radius: 1.5vmin;
-    margin-top: 35vmin;
+    margin-top: 20vmin;
     margin-bottom: 15vmin;
     padding: 3.7vmin;
     line-height: 2.17vmin;
 } 
 .news {
-    background-color: white;
-    display: block;
+    margin: 3vmin;
+    background-color: #fff;
+    padding: 3vmin;
     border-radius: 1vmin;
-    padding: 1vmin;
+}
+.news__rect {
+    font-weight:bolder;
+    margin-bottom: 10px;
+}
+.news__date {
+    color: #6a6969;
+    font-style: oblique;
+    margin-bottom: 10px;
+}
+.news > p {
+    width: 85%;
+    padding-left: 2%;
+}
+.news > ul {
+    width: 80%;
+    padding-left: 7%;
+}
+.news > ol {
+    width: 80%;
+    padding-left: 7%;
 }
 .dt2 {
     font-size: 2.5vmin;
@@ -203,7 +224,7 @@ nav {
     height: 100vh;
     background-color: #CCC7C7;
     display: flexbox;
-    transition: 0.7s;
+    transition: 0.3s;
     position: fixed;
     top: 25vmin;
    
@@ -264,8 +285,8 @@ white-space: nowrap;
 }
 .is__visible > .nav__main ul {
     opacity: 1;
-    transition: 0.45s;
-    transition-delay: 0.65s;
+    transition: 0.3s;
+    transition-delay: 0.3s;
     padding-left: 1.5vmin;
     padding-bottom: 3vmin;
 }
@@ -426,15 +447,15 @@ aside {
     background-color: #CCC7C7;
     border-radius: 2.4vmin;
     transform: scale(0.50);
-    right: -6.9%;
-    top: 14%;
+    right: -8%;
+    top: 10%;
     z-index: 23989;
     transition: .2s ease;
 }
  .events:hover {
     transform: scale(0.9);
-    right: 1%;
-    top:27%;
+    right: 0%;
+    top:23%;
  }
  .events-header {
     width: 100%;

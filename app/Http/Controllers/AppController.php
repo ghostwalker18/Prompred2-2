@@ -15,7 +15,7 @@ class AppController extends Controller
 
     public function find()
     {
-        return view(view:'Finding');
+        return view(view: 'Finding');
     }
 
     /*
@@ -24,19 +24,20 @@ class AppController extends Controller
     не обязательный параметр, если параметр не задан, 
     то функция вернет название текущего месяца
     */
-    public function getMonthRus($num_month = false){
+    public function getMonthRus($num_month = false)
+    {
         // если не задан номер месяца
-        if(!$num_month){
+        if (!$num_month) {
             // номер текущего месяца
             $num_month = date('n');
         }
         // массив с названиями месяцев
-        $monthes = array(   
-            1 => 'Январь', 2 => 'Февраль', 3 => 'Март', 
-            4 => 'Апрель', 5 => 'Май', 6 => 'Июнь', 
-            7 => 'Июль', 8 => 'Август',9 => 'Сентябрь', 
-            10 => 'Октябрь', 11 => 'Ноябрь', 
-    12 => 'Декабрь'
+        $monthes = array(
+            1 => 'Январь', 2 => 'Февраль', 3 => 'Март',
+            4 => 'Апрель', 5 => 'Май', 6 => 'Июнь',
+            7 => 'Июль', 8 => 'Август', 9 => 'Сентябрь',
+            10 => 'Октябрь', 11 => 'Ноябрь',
+            12 => 'Декабрь'
         );
         // получаем название месяца из массива
         $name_month = $monthes[$num_month];
@@ -46,12 +47,12 @@ class AppController extends Controller
 
     public function welcome()
     {
-        return view(view:'welcome');
+        return view(view: 'welcome');
     }
 
     public function prompred()
     {
-        $articles = Article::query()->paginate(6,['a_date', 'a_text', 'a_title']);
+        $articles = Article::query()->paginate(6, ['a_date', 'a_text', 'a_title']);
 
         //$dates = Article::query()->where()
         //$date = DB::select("select CURRENT_DATE() as DATE");
@@ -60,15 +61,15 @@ class AppController extends Controller
 
         $year = date("Y");
 
-        $day = date("w", mktime(0,0,0,date("m"),date("d"),date("Y")));
+        $day = date("w", mktime(0, 0, 0, date("m"), date("d"), date("Y")));
 
         $month = date("n");
 
-        $monthes = array(   
-            1 => 'Январь', 2 => 'Февраль', 3 => 'Март', 
-            4 => 'Апрель', 5 => 'Май', 6 => 'Июнь', 
-            7 => 'Июль', 8 => 'Август',9 => 'Сентябрь', 
-            10 => 'Октябрь', 11 => 'Ноябрь', 
+        $monthes = array(
+            1 => 'Январь', 2 => 'Февраль', 3 => 'Март',
+            4 => 'Апрель', 5 => 'Май', 6 => 'Июнь',
+            7 => 'Июль', 8 => 'Август', 9 => 'Сентябрь',
+            10 => 'Октябрь', 11 => 'Ноябрь',
             12 => 'Декабрь'
         );
         // получаем название месяца из массива
@@ -78,36 +79,36 @@ class AppController extends Controller
 
         $events = DB::table('article')->where('a_date', '>=', "$year-$month-1")->where('a_date', '<=', "$year-$month-30")->pluck('a_date')->toArray();;
 
-        return view('PromPred', ['articles'=>$articles, 'year'=>$year, 'name_month'=>$name_month, 'month'=>$month, 'events'=>$events]);
-    }
- 
-    public function mailto()
-    {
-        return view(view:'MailTo');
+        return view('PromPred', ['articles' => $articles, 'year' => $year, 'name_month' => $name_month, 'month' => $month, 'events' => $events]);
     }
 
-    public function spp()
+    public function mailto()
     {
-        return view(view:'Spp');
+        return view(view: 'MailTo');
+    }
+
+    public function spp1()
+    {
+        return view(view: 'Spp1');
     }
 
     public function spp2()
     {
-        return view(view:'Spp2');
+        return view(view: 'Spp2');
     }
 
     public function spp3()
     {
-        return view(view:'Spp3');
+        return view(view: 'Spp3');
     }
 
     public function spp4()
     {
-        return view(view:'Spp4');
+        return view(view: 'Spp4');
     }
 
     public function test()
     {
-        return view(view:'test');
+        return view(view: 'test');
     }
 }
