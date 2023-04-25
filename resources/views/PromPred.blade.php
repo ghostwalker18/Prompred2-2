@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="header__menu">
-                <a href=""> <span class="lnr lnr-home"></span> </a>
+                <a href="/"> <span class="lnr lnr-home"></span> </a>
                 <a href="/mailto"> <span class="lnr lnr-envelope"></span> </a>
                 <a href="/Find"> <span class="lnr lnr-magnifier"></span> </a>
             </div>
@@ -40,7 +40,7 @@
             <div class="empty"></div>
         </div>
         <div class="content__wrapper">
-            <nav id="nav">
+        <nav id="nav">
                 <div class="nav__header">
                     <h3>Навигация</h3>
                 </div>
@@ -49,22 +49,22 @@
                     <ul>
                         <a href="">
                             <li>
-                                <div class="triangle"></div><a href="">Что такое СПП (р) РК?</a>
+                                <div class="triangle"></div><a href="/Spp">Что такое СПП (р) РК?</a>
                             </li>
                         </a>
                         <a href="">
                             <li>
-                                <div class="triangle"></div><a href="">Кто входит в СПП(Р) РК?</a>
+                                <div class="triangle"></div><a href="/Spp2">Кто входит в СПП(Р) РК?</a>
                             </li>
                         </a>
                         <a href="">
                             <li>
-                                <div class="triangle"></div><a href="">Деятельность союза</a>
+                                <div class="triangle"></div><a href="/Spp3">Деятельность союза</a>
                             </li>
                         </a>
                         <a href="">
                             <li>
-                                <div class="triangle"></div><a href="">РСПП</a>
+                                <div class="triangle"></div><a href="https://rspp.ru/">РСПП</a>
                             </li>
                         </a>
                         <a href="">

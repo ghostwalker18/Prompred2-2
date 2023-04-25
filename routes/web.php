@@ -42,6 +42,14 @@ Route::get('/mailto', [\App\Http\Controllers\AppController::class, 'mailto'])->n
 
 Route::get('/test', [\App\Http\Controllers\AppController::class, 'test'])->name(name:'test');
 
+Route::get('/Spp', [\App\Http\Controllers\AppController::class, 'spp'])->name(name:'spp');
+
+Route::get('/Spp2', [\App\Http\Controllers\AppController::class, 'spp2'])->name(name:'spp2');
+
+Route::get('/Spp3', [\App\Http\Controllers\AppController::class, 'spp3'])->name(name:'spp3');
+
+Route::get('/Spp4', [\App\Http\Controllers\AppController::class, 'spp4'])->name(name:'spp4');
+
 /* тут менял /PromPred на / тк я отлаживал оффлайн --> 
 Route::get('/', function () {
     return view('welcome');

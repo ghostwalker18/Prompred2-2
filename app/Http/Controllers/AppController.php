@@ -86,6 +86,26 @@ class AppController extends Controller
         return view(view:'MailTo');
     }
 
+    public function spp()
+    {
+        return view(view:'Spp');
+    }
+
+    public function spp2()
+    {
+        return view(view:'Spp2');
+    }
+
+    public function spp3()
+    {
+        return view(view:'Spp3');
+    }
+
+    public function spp4()
+    {
+        return view(view:'Spp4');
+    }
+
     public function test()
     {
         return view(view:'test');

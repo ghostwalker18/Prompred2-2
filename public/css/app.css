@@ -1,3 +1,6 @@
+
+
+
 * {
     font-family: Cuprum, Arial, Helvetical, sans-serif;
     margin: 0;
@@ -102,7 +105,7 @@ header {
 .is__visible {
  opacity: 1;
  margin-left: 0;
- transition: .3s;
+ transition: 1s;
  width: 21.5%;
 
 }
@@ -150,19 +153,57 @@ header {
 main {
     width: 60%;
     height: auto;
-    display: flex;
+    background-color: #c7ddf2;
+    display: block;
     margin-left: 20%;
     border-radius: 1.5vmin;
-    margin-top: 27vmin;
+    margin-top: 35vmin;
     margin-bottom: 15vmin;
-    line-height: 2.2vmin;
+    padding: 3.7vmin;
+    line-height: 2.17vmin;
+} 
+.news {
+    background-color: white;
+    display: block;
+    border-radius: 1vmin;
+    padding: 1vmin;
 }
+.dt2 {
+    font-size: 2.5vmin;
+    color: #B81D1F;
+   
+}
+.main {
+    margin-bottom: 1.5vmin;
+}
+main b {
+    font-size: 1.75vmin;
+}
+.dt2 b {
+    font-size: 3vmin;
+}
+.nl {
+    color: #878A71;
+    font-size:1.7vmin;
+    margin: 0 9vmin;
+    display: list-item;
+}
+.div {
+  
+   
+}
+main li {
+    margin:  1.2vmin 5.5vmin;
+    color: #363739;
+}
+
+
 nav {
     width: 0%;
     height: 100vh;
     background-color: #CCC7C7;
     display: flexbox;
-    transition: 0.3s;
+    transition: 0.7s;
     position: fixed;
     top: 25vmin;
    
@@ -218,13 +259,13 @@ white-space: nowrap;
 }
 .is__visible > .nav__header h3 {
     opacity: 1;
-    transition: .3s;
+    transition: 1s;
   
 }
 .is__visible > .nav__main ul {
     opacity: 1;
-    transition: 0.3s;
-    transition-delay: 0.2s;
+    transition: 0.45s;
+    transition-delay: 0.65s;
     padding-left: 1.5vmin;
     padding-bottom: 3vmin;
 }
@@ -240,12 +281,6 @@ footer {
     height: 6vmin;
     background-color: #B81D1F;
     display:flex;
-    margin: 0;
-    padding: 0;
-    align-items:flex-end;
-   position: fixed;
-   bottom: 0;
-
 }
 .footer__menu {
     display: flex;
@@ -292,12 +327,11 @@ footer {
 
 }
 .petr__1 {
-    margin: 0;
-    padding: 0;
-   
-   margin-bottom: -0.5vmin;
-   transform: scale(-1, 1);
 
+    padding: 0;
+
+   transform: scale(-1, 1);
+    transform: translateY(-26vmin);
 }
 .petr__1 img {
     margin: 0;
@@ -392,13 +426,13 @@ aside {
     background-color: #CCC7C7;
     border-radius: 2.4vmin;
     transform: scale(0.50);
-    right: -7.5%;
-    top: 10%;
+    right: -6.9%;
+    top: 14%;
     z-index: 23989;
     transition: .2s ease;
 }
  .events:hover {
-    transform: scale(1);
+    transform: scale(0.9);
     right: 1%;
     top:27%;
  }
@@ -473,31 +507,69 @@ aside {
     font-weight: bold;
     text-align: center;
 }
-.news {
-    margin: 3vmin;
+
+
+
+.popupa {
+    position: fixed;
+    width: 70vmin;
+    height: 70vmin;
+    text-align: center;
+    padding: 1.6vmin;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 15%;
+    background-color: #CCC7C7;
+    border-radius: 2vmin;
+    z-index: 9722222622;
+ }
+ .popupa h3 {
+    color: #B81D1F;
+    padding: 1vmin;
     background-color: #fff;
-    padding: 3vmin;
-    border-radius: 1vmin;
-}
-.news__rect {
-    font-weight:bolder;
-    margin-bottom: 10px;
-}
-.news__date {
-    color: #6a6969;
-    font-style: oblique;
-    margin-bottom: 10px;
-}
-.news > p {
-    width: 85%;
-    padding-left: 2%;
-}
-.news > ul {
-    width: 80%;
-    padding-left: 7%;
-}
-.news > ol {
-    width: 80%;
-    padding-left: 7%;
-}
+    border-radius: 1.5vmin;
+    font-size: 2.3vmin;
+ }
+ .popupa-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #0000007b;
+   z-index: 98758765876587;
+ }
+ .off-wrap {
+    display: none;
+ }
+ .active {
+    color: #e21616;
+    border-radius:150%;
+    background-color: #f9f9f9;
+   
+ }
+ .btn {
+    width: 100%;
+    color: #B81D1F;
+    height: auto;
+    padding: 1vmin;
+    background-color: #fff;
+    border-radius: 1.5vmin;
+    font-size: 2vmin;
+    border: none;
+    cursor: pointer;  
+    font-weight: 600;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    right: 0%;
+    left: auto;
+ }
+
+ .today {
+    background-color: #fff;
+    border-radius: 100%;
+    clip-path: circle(37% at 50% 50%);
+ }
+ 
 /* na flexax */
