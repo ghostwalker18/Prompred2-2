@@ -37,6 +37,7 @@
             </div>
 
             <h3>Новости</h3>
+
             <div class="empty"></div>
         </div>
         <div class="content__wrapper">
@@ -162,18 +163,21 @@
 
                                 for ($i = 1; $i <= date('t'); $i++) {
                                     $day = date("w", strtotime("$year-$month-$i"));
-
-                                    if ($day == 0) {
-                                        echo "<td class='weekend'>$i</td>";
-                                        echo "</tr>";
-                                    } else 
-                                        if (($day == 6)) {
-                                        echo "<td class='weekend'>$i</td>";
-                                    } else
-                                         if (in_array("$year-0$month-$i", $events)) {
-                                        echo "<td class='active-date'>$i</td>";
+                                    if ($i == date('d')) {
+                                        echo "<td class='today'>$i</td>";
                                     } else {
-                                        echo "<td >$i</td>";
+                                        if ($day == 0) {
+                                            echo "<td class='weekend'>$i</td>";
+                                            echo "</tr>";
+                                        } else 
+                                        if (($day == 6)) {
+                                            echo "<td class='weekend'>$i</td>";
+                                        } else
+                                         if (in_array("$year-0$month-$i", $events)) {
+                                            echo "<td class='active-date'>$i</td>";
+                                        } else {
+                                            echo "<td >$i</td>";
+                                        }
                                     }
                                 }
                                 ?>

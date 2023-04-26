@@ -169,23 +169,31 @@ main {
     border-radius: 1vmin;
 }
 .news__rect {
+    line-height: 2.5vmin;
+    font-size: min(2vmin, 2rem);
     font-weight:bolder;
     margin-bottom: 10px;
 }
 .news__date {
+    line-height: 2.5vmin;
+    font-size: min(2vmin, 2rem);
     color: #6a6969;
     font-style: oblique;
     margin-bottom: 10px;
 }
 .news > p {
+    line-height: 2.5vmin;
+    font-size: min(2vmin, 2rem);
     width: 85%;
     padding-left: 2%;
 }
 .news > ul {
+    font-size: min(2vmin, 2rem);
     width: 80%;
     padding-left: 7%;
 }
 .news > ol {
+    font-size: min(2vmin, 2rem);
     width: 80%;
     padding-left: 7%;
 }
@@ -588,6 +596,7 @@ aside {
  }
 
  .today {
+    color: #B81D1F;
     background-color: #fff;
     border-radius: 100%;
     clip-path: circle(37% at 50% 50%);
