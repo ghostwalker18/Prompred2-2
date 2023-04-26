@@ -197,102 +197,11 @@
                         <!--страницы-->
 
                     </td>
-                    <?php var_dump($data); ?>
                 </main>
                 <div class='modal' id='x1'>
                 </div>
                 <div>
-
-                    <aside>
-
-                        <div class="popupa off-wrap" id="popupa">
-                            <h3>О мероприятии</h3>
-                            <button class="btn active">Закрыть</button>
-                        </div>
-                        <div class="events">
-                            <div class="events-header">
-                                <h3>Мероприятия</h3>
-                            </div>
-                            <div class="events-body">
-                                <div class="events-date">
-                                    <h4>Апрель, 2023</h4>
-                                    <div class="date-deliner"></div>
-                                </div>
-                                <table>
-                                    <thead>
-                                        <td>пн</td>
-                                        <td>вт</td>
-                                        <td>ср</td>
-                                        <td>чт</td>
-                                        <td>пт</td>
-                                        <td class="weekend">сб</td>
-                                        <td class="weekend">вс</td>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td class="weekend">1</td>
-                                            <td class="weekend">2</td>
-                                        </tr>
-                                        <tr></tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>4</td>
-                                            <td>5</td>
-                                            <td class="active-date d2" id='d1'>6</td>
-                                            <td>7</td>
-                                            <td class="weekend">8</td>
-                                            <td class="weekend">9</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10</td>
-                                            <td>11</td>
-                                            <td>12</td>
-                                            <td>13</td>
-                                            <td>14</td>
-                                            <td class="weekend">15</td>
-                                            <td class="weekend">16</td>
-                                        </tr>
-                                        <tr>
-                                            <td>17</td>
-                                            <td>18</td>
-                                            <td>19</td>
-                                            <td>20</td>
-                                            <td>21</td>
-                                            <td class="weekend">22</td>
-                                            <td class="weekend today">23</td>
-                                        </tr>
-                                        <tr>
-                                            <td>24</td>
-                                            <td>25</td>
-                                            <td>26</td>
-                                            <td>27</td>
-                                            <td>28</td>
-                                            <td class="weekend">29</td>
-                                            <td class="weekend">30</td>
-                                        </tr>
-                                        <tr>
-                                            <td>31</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-
-                                        </tr>
-
-
-                                    </tbody>
-                                </table>
-                                <div class='events-button'>Все Мероприятия</div>
-                            </div>
-                        </div>
-                    </aside>
+                <?php include('events.blade.php'); ?>
                 </div>
 
             </div>

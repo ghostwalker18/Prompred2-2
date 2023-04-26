@@ -10,9 +10,7 @@ use App\Models\Article;
 
 use WithPagination;
 
-class AppController extends Controller
-{
-    public function time()
+function Funcija()
     {
         $articles = Article::query()->paginate(6, ['a_date', 'a_text', 'a_title']);
 
@@ -41,8 +39,13 @@ class AppController extends Controller
 
         $events = DB::table('article')->where('a_date', '>=', "$year-$month-1")->where('a_date', '<=', "$year-$month-30")->pluck('a_date')->toArray();;
         $info = array('articles' => $articles, 'year' => $year, 'name_month' => $name_month, 'month' => $month, 'events' => $events);
-        return ($info);
+
+
+        return $info;
     }
+
+class AppController extends Controller
+{
 
     public function find()
     {
@@ -132,10 +135,9 @@ class AppController extends Controller
 
     public function spp3()
     {
-        $data = array();
-        $data = time();
 
-        return view('Spp3', ['data' => $data]);
+
+        return view('Spp3', Funcija());
     }
 
     public function spp4()
