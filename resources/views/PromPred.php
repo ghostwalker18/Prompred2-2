@@ -37,7 +37,6 @@
             </div>
 
             <h3>Новости</h3>
-
             <div class="empty"></div>
         </div>
         <div class="content__wrapper">
@@ -112,6 +111,7 @@
                 </div>
             </nav>
             <main>
+
                 <div class="news__1" style="background: none;">
 
                     <?php
@@ -189,6 +189,7 @@
                 </div>
             </aside>
         </div>
+
         <footer>
             <div class="ds"><img src="images/garant__logo.png" class="garant"></div>
             <div class="footer__menu">

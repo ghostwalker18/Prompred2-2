@@ -12,6 +12,37 @@ use WithPagination;
 
 class AppController extends Controller
 {
+    public function time()
+    {
+        $articles = Article::query()->paginate(6, ['a_date', 'a_text', 'a_title']);
+
+        //$dates = Article::query()->where()
+        //$date = DB::select("select CURRENT_DATE() as DATE");
+
+        //$currentDate = date("d.m.Y");
+
+        $year = date("Y");
+
+        $day = date("w", mktime(0, 0, 0, date("m"), date("d"), date("Y")));
+
+        $month = date("n");
+
+        $monthes = array(
+            1 => 'Январь', 2 => 'Февраль', 3 => 'Март',
+            4 => 'Апрель', 5 => 'Май', 6 => 'Июнь',
+            7 => 'Июль', 8 => 'Август', 9 => 'Сентябрь',
+            10 => 'Октябрь', 11 => 'Ноябрь',
+            12 => 'Декабрь'
+        );
+        // получаем название месяца из массива
+        $name_month = $monthes[$month];
+
+        $paginationTheme = 'bootstrap';
+
+        $events = DB::table('article')->where('a_date', '>=', "$year-$month-1")->where('a_date', '<=', "$year-$month-30")->pluck('a_date')->toArray();;
+        $info = array('articles' => $articles, 'year' => $year, 'name_month' => $name_month, 'month' => $month, 'events' => $events);
+        return ($info);
+    }
 
     public function find()
     {
@@ -89,17 +120,22 @@ class AppController extends Controller
 
     public function spp1()
     {
+
         return view(view: 'Spp1');
     }
 
     public function spp2()
     {
-        return view(view: 'Spp2');
+
+        return view('Spp2');
     }
 
     public function spp3()
     {
-        return view(view: 'Spp3');
+        $data = array();
+        $data = time();
+
+        return view('Spp3', ['data' => $data]);
     }
 
     public function spp4()

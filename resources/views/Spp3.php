@@ -127,6 +127,9 @@
                 </nav>
 
                 <main>
+
+
+
                     <td rowspan="2" background="/support/images/bg_center.gif">
 
                         <!--название подраздела (если есть, если нет - сразу же начинается текст)-->
@@ -194,6 +197,7 @@
                         <!--страницы-->
 
                     </td>
+                    <?php var_dump($data); ?>
                 </main>
                 <div class='modal' id='x1'>
                 </div>

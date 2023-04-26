@@ -27,6 +27,7 @@ Route::get('/PromPred', function () {
 
 Route::get('/', [\App\Http\Controllers\AppController::class, 'prompred'])->name(name: 'prompred');
 
+Route::get('events', [\App\Http\Controllers\AppController::class, 'events'])->name(name: 'events');
 /*Route::get('/Find', function () {
     return view('Finding');
 });*/
@@ -36,7 +37,6 @@ Route::get('/Find', [\App\Http\Controllers\AppController::class, 'find'])->name(
 /*Route::get('/mailto', function () {
     return view('MailTo');
 });*/
-
 
 Route::get('/mailto', [\App\Http\Controllers\AppController::class, 'mailto'])->name(name: 'mailto');
 
