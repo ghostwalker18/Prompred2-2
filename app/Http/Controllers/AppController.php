@@ -54,7 +54,7 @@ class AppController extends Controller
 
     public function welcome()
     {
-        return view(view: 'welcome');
+        return view('welcome');
     }
     public function prompred()
     {
@@ -80,8 +80,6 @@ class AppController extends Controller
 
     public function spp3()
     {
-
-
         return view('Spp3', getMyDataForEvents());
     }
 
@@ -89,9 +87,249 @@ class AppController extends Controller
     {
         return view('Spp4', getMyDataForEvents());
     }
-
-    public function test()
+    public function spp5()
     {
-        return view(view: 'test');
+        return view('Spp5', getMyDataForEvents());
+    }
+    public function spp6()
+    {
+        return view('Spp6', getMyDataForEvents());
+    }
+    public function spp7()
+    {
+        return view('Spp7', getMyDataForEvents());
+    }
+    public function spp8()
+    {
+        return view('Spp8', getMyDataForEvents());
+    }
+    public function spp9()
+    {
+        return view('Spp9', getMyDataForEvents());
+    }
+    //  контроллеры ссылок подвального уровня
+    public function link11()
+    {
+        return view('Spp1-links/link1', getMyDataForEvents());
+    }
+    public function link12()
+    {
+        return view('Spp1-links/link2', getMyDataForEvents());
+    }
+    public function link111()
+    {
+        return view('Spp1-links/Spp1-link1-links/link1', getMyDataForEvents());
+    }
+    public function link112()
+    {
+        return view('Spp1-links/Spp1-link1-links/link2', getMyDataForEvents());
+    }
+    public function link113()
+    {
+        return view('Spp1-links/Spp1-link1-links/link3', getMyDataForEvents());
+    }
+
+    public function link121()
+    {
+        return view('Spp1-links/Spp1-link2-links/link1', getMyDataForEvents());
+    }
+    public function link122()
+    {
+        return view('Spp1-links/Spp1-link2-links/link2', getMyDataForEvents());
+    }
+    public function link123()
+    {
+        return view('Spp1-links/Spp1-link2-links/link3', getMyDataForEvents());
+    }
+
+    public function link1211()
+    {
+        return view('Spp1-links/Spp1-link2-links/Spp1-link2-links-link1/link1', getMyDataForEvents());
+    }
+
+    public function link31()
+    {
+        return view('Spp3-links/link1', getMyDataForEvents());
+    }
+    public function link32()
+    {
+        return view('Spp3-links/link2', getMyDataForEvents());
+    }
+    public function link33()
+    {
+        return view('Spp3-links/link3', getMyDataForEvents());
+    }
+    public function link34()
+    {
+        return view('Spp3-links/link4', getMyDataForEvents());
+    }
+    public function link35()
+    {
+        return view('Spp3-links/link5', getMyDataForEvents());
+    }
+    public function link36()
+    {
+        return view('Spp3-links/link6', getMyDataForEvents());
+    }
+    public function link37()
+    {
+        return view('Spp3-links/link7', getMyDataForEvents());
+    }
+    public function link311()
+    {
+        return view('Spp3-links/Spp3-link1-links/link1', getMyDataForEvents());
+    }
+    public function link312()
+    {
+        return view('Spp3-links/Spp3-link1-links/link2', getMyDataForEvents());
+    }
+    public function link313()
+    {
+        return view('Spp3-links/Spp3-link1-links/link3', getMyDataForEvents());
+    }
+    public function link314()
+    {
+        return view('Spp3-links/Spp3-link1-links/link4', getMyDataForEvents());
+    }
+    public function link315()
+    {
+        return view('Spp3-links/Spp3-link1-links/link5', getMyDataForEvents());
+    }
+    public function link316()
+    {
+        return view('Spp3-links/Spp3-link1-links/link6', getMyDataForEvents());
+    }
+    public function link317()
+    {
+        return view('Spp3-links/Spp3-link1-links/link7', getMyDataForEvents());
+    }
+    public function link318()
+    {
+        return view('Spp3-links/Spp3-link1-links/link8', getMyDataForEvents());
+    }
+    public function link51()
+    {
+        return view('Spp5-links/link1', getMyDataForEvents());
+    }
+    public function link52()
+    {
+        return view('Spp5-links/link2', getMyDataForEvents());
+    }
+    public function link53()
+    {
+        return view('Spp5-links/link3', getMyDataForEvents());
+    }
+    public function link54()
+    {
+        return view('Spp5-links/link4', getMyDataForEvents());
+    }
+    public function link55()
+    {
+        return view('Spp5-links/link5', getMyDataForEvents());
+    }
+    public function link56()
+    {
+        return view('Spp5-links/link6', getMyDataForEvents());
+    }
+
+    public function link61()
+    {
+        return view('Spp6-links/link1', getMyDataForEvents());
+    }
+    public function link62()
+    {
+        return view('Spp6-links/link2', getMyDataForEvents());
+    }
+    public function link63()
+    {
+        return view('Spp6-links/link3', getMyDataForEvents());
+    }
+    public function link64()
+    {
+        return view('Spp6-links/link4', getMyDataForEvents());
+    }
+    public function link65()
+    {
+        return view('Spp6-links/link5', getMyDataForEvents());
+    }
+    public function link66()
+    {
+        return view('Spp6-links/link6', getMyDataForEvents());
+    }
+
+    public function link71()
+    {
+        return view('Spp7-links/link1', getMyDataForEvents());
+    }
+    public function link72()
+    {
+        return view('Spp7-links/link2', getMyDataForEvents());
+    }
+    public function link73()
+    {
+        return view('Spp7-links/link3', getMyDataForEvents());
+    }
+    public function link74()
+    {
+        return view('Spp7-links/link4', getMyDataForEvents());
+    }
+    public function link75()
+    {
+        return view('Spp7-links/link5', getMyDataForEvents());
+    }
+    public function link76()
+    {
+        return view('Spp7-links/link6', getMyDataForEvents());
+    }
+    public function link77()
+    {
+        return view('Spp7-links/link7', getMyDataForEvents());
+    }
+    public function link78()
+    {
+        return view('Spp7-links/link8', getMyDataForEvents());
+    }
+    public function link79()
+    {
+        return view('Spp7-links/link9', getMyDataForEvents());
+    }
+
+
+
+    public function link91()
+    {
+        return view('Spp9-links/link1', getMyDataForEvents());
+    }
+    public function link92()
+    {
+        return view('Spp9-links/link2', getMyDataForEvents());
+    }
+    public function link93()
+    {
+        return view('Spp9-links/link3', getMyDataForEvents());
+    }
+    public function link94()
+    {
+        return view('Spp9-links/link4', getMyDataForEvents());
+    }
+    public function link95()
+    {
+        return view('Spp9-links/link5', getMyDataForEvents());
+    }
+    public function link96()
+    {
+        return view('Spp9-links/link6', getMyDataForEvents());
+    }
+    public function link97()
+    {
+        return view('Spp9-links/link7', getMyDataForEvents());
+    }
+    public function link98()
+    {
+        return view('Spp9-links/link8', getMyDataForEvents());
+    }
+    public function link99()
+    {
+        return view('Spp9-links/link9', getMyDataForEvents());
     }
 }

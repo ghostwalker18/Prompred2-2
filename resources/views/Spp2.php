@@ -264,12 +264,7 @@
                 </main>
                 <div class='modal' id='x1'>
                 </div>
-                <div>
-                    <?php
-                    include('events.blade.php');
-                    ?>
-                </div>
-
+                <?php include('events.blade.php'); ?>
             </div>
             <?php include('svg.blade.php'); ?>
             <script src="js/appp.js"></script>

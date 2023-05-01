@@ -52,11 +52,11 @@
                         </p>
                         <p class="div">
 
-                            <img border="0" src="/support/images/sd.gif" width="13" height="12" align="absmiddle"><a href="/site/About/Structure/" class="nl">Организационная структура</a>
+                            <img border="0" src="/support/images/sd.gif" width="13" height="12" align="absmiddle"><a href="link11" class="nl">Организационная структура</a>
 
 
 
-                            <img border="0" src="/support/images/sd.gif" width="13" height="12" align="absmiddle"><a href="/site/About/Document/" class="nl">Документы</a><br>
+                            <img border="0" src="/support/images/sd.gif" width="13" height="12" align="absmiddle"><a href="link12" class="nl">Документы</a><br>
 
                             <br>
 
@@ -134,6 +134,11 @@
                         </p>
                         <p>&nbsp;</p>
 
+
+
+
+
+
                         <!--страницы-->
 
                     </td>
@@ -141,6 +146,7 @@
                 <div class='modal' id='x1'>
                 </div>
                 <?php include('events.blade.php'); ?>
+
             </div>
             <?php include('svg.blade.php'); ?>
             <script src="js/appp.js"></script>

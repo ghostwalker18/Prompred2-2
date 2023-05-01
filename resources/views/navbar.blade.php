@@ -27,7 +27,12 @@
             </a>
             <a href="">
                 <li>
-                    <div class="triangle"></div><a href="/Spp4">Предложения для членов союза</a>
+                    <div class="triangle"></div><a href="/Spp4">Социально экономический раздел</a>
+                </li>
+            </a>
+            <a href="">
+                <li>
+                    <div class="triangle"></div><a href="/Spp5">Предложения для членов союза</a>
                 </li>
             </a>
             <a href="">
