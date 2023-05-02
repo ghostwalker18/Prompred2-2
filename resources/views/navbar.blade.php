@@ -37,22 +37,22 @@
             </a>
             <a href="">
                 <li>
-                    <div class="triangle"></div><a href="">Представительство МСО ПАУ в РК</a>
+                    <div class="triangle"></div><a href="/Spp6">Представительство МСО ПАУ в РК</a>
                 </li>
             </a>
             <a href="">
                 <li>
-                    <div class="triangle"></div><a href="">Конференции, семинары, выставки</a>
+                    <div class="triangle"></div><a href="/Spp7">Конференции, семинары, выставки</a>
                 </li>
             </a>
             <a href="">
                 <li>
-                    <div class="triangle"></div><a href="">Контакты</a>
+                    <div class="triangle"></div><a href="/Spp8">Контакты</a>
                 </li>
             </a>
             <a href="">
                 <li>
-                    <div class="triangle"></div><a href="">Антикризисная политика</a>
+                    <div class="triangle"></div><a href="/Spp9">Антикризисная политика</a>
                 </li>
             </a>
         </ul>
