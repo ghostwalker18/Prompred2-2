@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 
+use Illuminate\Pagination\LengthAwarePaginator;
+
 use Illuminate\Http\Request;
 
 use App\Models\Article;
@@ -55,7 +57,9 @@ class AppController extends Controller
     public function findNews(Request $request)
     {
 
-        $articles = Article::where("a_title", "LIKE", "%". $request->input('text') . "%")->get(['a_date', 'a_text', 'a_title']);
+        $articles2 = Article::where("a_title", "LIKE", "%". $request->input('text') . "%")->paginate($perPage = 6, $columns = ['a_date', 'a_text', 'a_title']);
+        //$articles2 = DB::table('article')->where("a_title", "LIKE", "%". $request->input('text') . "%")->get();
+
 
         $year = date("Y");
 
@@ -76,9 +80,9 @@ class AppController extends Controller
         $paginationTheme = 'bootstrap';
 
         $events = DB::table('article')->where('a_date', '>=', "$year-$month-1")->where('a_date', '<=', "$year-$month-30")->pluck('a_date')->toArray();;
-        $info = array('articles' => $articles, 'year' => $year, 'name_month' => $name_month, 'month' => $month, 'events' => $events);
+        $info = array('articles2' => $articles2, 'year' => $year, 'name_month' => $name_month, 'month' => $month, 'events' => $events);
 
-        return view('PromPred', $info);
+        return view('FindNews', $info);
 
     }
 

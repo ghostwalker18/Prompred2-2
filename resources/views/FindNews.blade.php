@@ -27,7 +27,7 @@
             </div>
             <div class="header__menu">
                 <a href="/"> <span class="lnr lnr-home"></span> </a>
-                <a href="/mailto"> <span class="lnr lnr-envelope"></span> </a>
+                <a href="mailto:koposov@cs.petrsu.ru"> <span class="lnr lnr-envelope"></span> </a>
                 <a href="/Find"> <span class="lnr lnr-magnifier"></span> </a>
             </div>
         </header>

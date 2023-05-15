@@ -34,7 +34,9 @@ Route::get('events', [\App\Http\Controllers\AppController::class, 'events'])->na
 
 Route::get('/Find', [\App\Http\Controllers\AppController::class, 'find'])->name(name: 'find');
 
-Route::match(['get', 'post'],'/find_news', [\App\Http\Controllers\AppController::class, 'findNews'])->name(name: 'findNews');
+//Route::match(['get', 'post'],'/find_news', [\App\Http\Controllers\AppController::class, 'findNews'])->name(name: 'findNews');
+
+Route::get('/find_news', [\App\Http\Controllers\AppController::class, 'findNews'])->name(name: 'findNews');
 
 /*Route::get('/mailto', function () {
     return view('MailTo');
