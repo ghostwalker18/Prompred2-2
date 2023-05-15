@@ -54,10 +54,15 @@ class AppController extends Controller
         return view('Finding', getMyDataForEvents());
     }
 
-    public function findNews(Request $request)
+    public function search(Request $request)
+    {
+        return redirect()->route('showNews', ['nameNews'=>$request->input('text')]);
+    }
+
+    public function showNews(Request $request, $nameNews)
     {
 
-        $articles2 = Article::where("a_title", "LIKE", "%". $request->input('text') . "%")->paginate($perPage = 6, $columns = ['a_date', 'a_text', 'a_title']);
+        $articles = Article::where("a_title", "LIKE", "%". $nameNews . "%")->paginate($perPage = 6, $columns = ['a_date', 'a_text', 'a_title']);
         //$articles2 = DB::table('article')->where("a_title", "LIKE", "%". $request->input('text') . "%")->get();
 
 
@@ -77,12 +82,11 @@ class AppController extends Controller
         // получаем название месяца из массива
         $name_month = $monthes[$month];
 
-        $paginationTheme = 'bootstrap';
-
         $events = DB::table('article')->where('a_date', '>=', "$year-$month-1")->where('a_date', '<=', "$year-$month-30")->pluck('a_date')->toArray();;
-        $info = array('articles2' => $articles2, 'year' => $year, 'name_month' => $name_month, 'month' => $month, 'events' => $events);
+        $info = array('articles' => $articles, 'year' => $year, 'name_month' => $name_month, 'month' => $month, 'events' => $events);
 
-        return view('FindNews', $info);
+        return view('PromPred', $info);
+
 
     }
 

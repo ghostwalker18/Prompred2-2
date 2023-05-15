@@ -30,7 +30,7 @@
             <main>
                 <div class="input_wrapper">
                     <div class="find">
-                        <form method = "" action = "/find_news">
+                        <form method = "" action = "/search">
                             <input type="search" name = "text" class="search" placeholder="Начните ввод...">
                             <button class="submit" type="submit">
                                 <span class="lnr lnr-magnifier ss"></span>

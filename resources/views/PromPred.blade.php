@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Союз промышленников и предпринимателей (работадателей) республики Карелия">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-    <link href="css/app.css" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css"> 
     <title>PromPred</title>
 
 
@@ -18,7 +18,7 @@
     <div class='wrapper'>
         <header>
             <div class="logo__wrapper">
-                <img class="logo" src='images/titleShadCoder.png'>
+                <img class="logo" src="{{ asset('images/titleShadCoder.png')}}">
                 <div class="title__wrapper">
                     <h3>СОЮЗ ПРОМЫШЛЕННИКОВ</h3>
                     <h3>И ПРЕДПРИНИМАТЕЛЕЙ (РАБОТАДАТЕЛЕЙ)</h3>
@@ -191,7 +191,7 @@
         </div>
 
         <footer>
-            <div class="ds"><img src="images/garant__logo.png" class="garant"></div>
+            <div class="ds"><img src="{{ asset('images/garant__logo.png')}}" class="garant"></div>
             <div class="footer__menu">
                 <a class="pageControler" style="display: flex; margin: 0 2vmin;" href={{$articles->previousPageUrl()}}>
                     <p style="margin: 0 2vmin;">Предыдущая</p>
@@ -210,7 +210,7 @@
                     <p style="margin: 0 2vmin;">Следующая</p>
                 </a>
             </div>
-            <div class="petr__1"><img src="images/Petr1.png"></di>
+            <div class="petr__1"><img src="{{ asset('images/Petr1.png')}}"></di>
         </footer>
 
     </div>

@@ -1,3 +1,8 @@
+
+<div class="popupa" id="popupa">
+   <h3>О мероприятии</h3>
+   <button class="btn active">Закрыть</button>
+</div>
 <aside>
     <div class="events">
         <div class="events-header">
@@ -61,3 +66,4 @@
         </div>
     </div>
 </aside>
+<script src="events.js"></script>

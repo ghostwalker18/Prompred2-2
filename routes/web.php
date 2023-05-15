@@ -36,7 +36,9 @@ Route::get('/Find', [\App\Http\Controllers\AppController::class, 'find'])->name(
 
 //Route::match(['get', 'post'],'/find_news', [\App\Http\Controllers\AppController::class, 'findNews'])->name(name: 'findNews');
 
-Route::get('/find_news', [\App\Http\Controllers\AppController::class, 'findNews'])->name(name: 'findNews');
+Route::get('/search', [\App\Http\Controllers\AppController::class, 'search'])->name(name: 'search');
+
+Route::get('/showNews/{nameNews}', [\App\Http\Controllers\AppController::class, 'showNews'])->name(name: 'showNews');
 
 /*Route::get('/mailto', function () {
     return view('MailTo');
