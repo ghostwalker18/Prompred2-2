@@ -115,7 +115,7 @@
                 <div class="news__1" style="background: none;">
 
                     <?php
-                    foreach ($articles as $article) {
+                    foreach ($articles2 as $article) {
                         echo "<div class='news' style='margin: 20px;'>";
                         echo "<div class='news__rect'>$article->a_title</div>";
                         echo "<time class='news__date'>$article->a_date</time>";
@@ -193,19 +193,19 @@
         <footer>
             <div class="ds"><img src="images/garant__logo.png" class="garant"></div>
             <div class="footer__menu">
-                <a class="pageControler" style="display: flex; margin: 0 2vmin;" href={{$articles->previousPageUrl()}}>
+                <a class="pageControler" style="display: flex; margin: 0 2vmin;" href={{$articles2->previousPageUrl()}}>
                     <p style="margin: 0 2vmin;">Предыдущая</p>
                     <div class="triangle"></div>
                 </a>
-                <a class="pageControler" style="display: flex;text-decoration:none;" href={{$articles->url(1)}}>
+                <a class="pageControler" style="display: flex;text-decoration:none;" href={{$articles2->url(1)}}>
                     <p>1</p>
                 </a>
 
-                <p style="color: white;">...{{$articles->currentPage()}}...</p>
-                <a class="pageControler" style="display: flex;text-decoration:none;" href={{$articles->url($articles->lastPage())}}>
-                    <p>{{$articles->lastPage()}}</p>
+                <p style="color: white;">...{{$articles2->currentPage()}}...</p>
+                <a class="pageControler" style="display: flex;text-decoration:none;" href={{$articles2->url($articles2->lastPage())}}>
+                    <p>{{$articles2->lastPage()}}</p>
                 </a>
-                <a class="pageControler" style="display: flex;" href={{$articles->nextPageUrl()}}>
+                <a class="pageControler" style="display: flex;" href={{$articles2->nextPageUrl()}}>
                     <div class="two triangle"></div>
                     <p style="margin: 0 2vmin;">Следующая</p>
                 </a>
