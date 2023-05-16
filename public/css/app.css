@@ -602,6 +602,9 @@ aside {
     background-color: #fff;
     border-radius: 100%;
     clip-path: circle(37% at 50% 50%);
+    display: flex;
+    justify-content: center;
+    border-bottom: solid #000 0.4vmin;
  }
  
 /* na flexax */
