@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Союз промышленников и предпринимателей (работадателей) республики Карелия">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css"> 
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
     <title>PromPred</title>
 
 
@@ -174,7 +174,7 @@
                                             echo "<td class='weekend'>$i</td>";
                                         } else
                                          if (in_array("$year-0$month-$i", $events)) {
-                                            echo "<td class='active-date'>$i</td>";
+                                            echo "<td class='active-date'><a href='/aboutEvent'>$i</a></td>";
                                         } else {
                                             echo "<td >$i</td>";
                                         }

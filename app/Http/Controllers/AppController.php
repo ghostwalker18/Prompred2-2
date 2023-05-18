@@ -53,16 +53,20 @@ class AppController extends Controller
     {
         return view('Finding', getMyDataForEvents());
     }
+    public function aboutEvent()
+    {
+        return view('aboutEvent');
+    }
 
     public function search(Request $request)
     {
-        return redirect()->route('showNews', ['nameNews'=>$request->input('text')]);
+        return redirect()->route('showNews', ['nameNews' => $request->input('text')]);
     }
 
     public function showNews(Request $request, $nameNews)
     {
 
-        $articles = Article::where("a_title", "LIKE", "%". $nameNews . "%")->paginate($perPage = 6, $columns = ['a_date', 'a_text', 'a_title']);
+        $articles = Article::where("a_title", "LIKE", "%" . $nameNews . "%")->paginate($perPage = 6, $columns = ['a_date', 'a_text', 'a_title']);
         //$articles2 = DB::table('article')->where("a_title", "LIKE", "%". $request->input('text') . "%")->get();
 
 
@@ -86,8 +90,6 @@ class AppController extends Controller
         $info = array('articles' => $articles, 'year' => $year, 'name_month' => $name_month, 'month' => $month, 'events' => $events);
 
         return view('PromPred', $info);
-
-
     }
 
     public function welcome()

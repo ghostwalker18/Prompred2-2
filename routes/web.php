@@ -32,6 +32,7 @@ Route::get('events', [\App\Http\Controllers\AppController::class, 'events'])->na
     return view('Finding');
 });*/
 
+Route::get('/aboutEvent', [\App\Http\Controllers\AppController::class, 'aboutEvent'])->name(name: 'aboutEvent');
 Route::get('/Find', [\App\Http\Controllers\AppController::class, 'find'])->name(name: 'find');
 
 //Route::match(['get', 'post'],'/find_news', [\App\Http\Controllers\AppController::class, 'findNews'])->name(name: 'findNews');
