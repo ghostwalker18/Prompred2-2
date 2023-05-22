@@ -53,9 +53,12 @@ class AppController extends Controller
     {
         return view('Finding', getMyDataForEvents());
     }
-    public function aboutEvent()
+    public function aboutEvent(Request $request)
     {
-        return view('aboutEvent');
+        $date = $request->date;
+
+        $event = Article::where('a_date', $date)->get();
+        return view('aboutEvent', ['event'=>$event]);
     }
 
     public function search(Request $request)

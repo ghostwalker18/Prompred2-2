@@ -47,18 +47,18 @@
                                     echo "<td class='weekend' id='idshnik'>$i</td>";
                                 } else
                                          if (in_array("$year-0$month-$i", $events)) {
-                                    echo "<td class='active-date'><a href='/aboutEvent'>$i</a></td>";
+                                            $date = "$year-0$month-$i";
+                                    echo "<td class='active-date'><a href='/aboutEvent?date=$date'>$i</a></td>";
                                 } else {
                                     echo "<td >$i</td>";
                                 }
                             }
                         }
                         ?>
-
                  </tbody>
              </table>
              <div class='events-button'>Все Мероприятия</div>
          </div>
-     </div>
+     </divE
  </aside>
  <script src="js/appp.js"></script>

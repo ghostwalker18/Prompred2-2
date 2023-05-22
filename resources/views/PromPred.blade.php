@@ -174,7 +174,8 @@
                                             echo "<td class='weekend'>$i</td>";
                                         } else
                                          if (in_array("$year-0$month-$i", $events)) {
-                                            echo "<td class='active-date'><a href='/aboutEvent'>$i</a></td>";
+                                            $date = "$year-0$month-$i";
+                                            echo "<td class='active-date'><a href='/aboutEvent?date=$date'>$i</a></td>";
                                         } else {
                                             echo "<td >$i</td>";
                                         }
