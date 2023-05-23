@@ -31,9 +31,7 @@
         <div class='wrapper'>
             <?php include('header.blade.php'); ?>
             <div class="page__now">
-                <div class="menu__toggle" id="nav__toggle">
-                    <div></div>
-                </div>
+                <?php include('toggle.blade.php'); ?>
 
                 <h3>Что такое СПП (р) РК?</h3>
                 <div class="empty"></div>
