@@ -31,9 +31,7 @@
         <div class='wrapper'>
             <?php include('header.blade.php'); ?>
             <div class="page__now">
-                <div class="menu__toggle" id="nav__toggle">
-                    <div></div>
-                </div>
+                <?php include('toggle.blade.php'); ?>
 
                 <h3>Предложения для членов союза</h3>
                 <div class="empty"></div>

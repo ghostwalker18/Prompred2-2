@@ -32,12 +32,13 @@
             </div>
         </header>
         <div class="page__now">
-            <div class="menu__toggle" id="nav__toggle">
+            <div class="menu__toggle" id="nav__toggle" style="display: flex;">
                 <div></div>
+                <p>Меню</p>
             </div>
 
             <h3>Новости</h3>
-            <div class="empty"></div>
+            <div class=" empty"></div>
         </div>
         <div class="content__wrapper">
             <nav id="nav">

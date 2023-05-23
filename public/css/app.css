@@ -60,13 +60,14 @@ header {
 }
 .menu__toggle {
    
-    width: 8.5vmin;
+    width: 17vmin;
     padding: 2vmin 1vmin;
     height: 3vmin;
     margin-left: 1vmin;
 }
 .menu__toggle div {
-    width: 90%;
+    margin-right: 3vmin;
+    width: 6vmin;
     height: 0.45vmin;
     background-color: #000;
     border-radius: 2vmin;
@@ -442,8 +443,6 @@ aside {
     height: 100vh;
     margin: 0;
     background-color: #c7ddf2;
-
-  
 }
 .events {
     position: fixed;
@@ -633,4 +632,17 @@ aside {
     border: none;
     cursor: pointer;  
     font-weight: 600;
+ }
+
+ @media (max-width: 768px) {
+    .events {
+        position: fixed;
+        background-color: #CCC7C7;
+        border-radius: 2.4vmin;
+        transform: scale(0.30);
+        right: -20%;
+        top: 3%;
+        z-index: 23989;
+        transition: .2s ease;
+    }
  }
