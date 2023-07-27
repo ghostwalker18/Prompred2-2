@@ -47,6 +47,11 @@ Route::get('/showNews/{nameNews}', [\App\Http\Controllers\AppController::class, 
 
 Route::get('/mailto', [\App\Http\Controllers\AppController::class, 'mailto'])->name(name: 'mailto');
 
+Route::get('/admin', [\App\Http\Controllers\AppController::class, 'adminEnter'])->name(name: 'adminEnter');
+
+Route::get('/allNews', [\App\Http\Controllers\AppController::class, 'allNews'])->name(name: 'allNews');
+Route::get('/newsAdd', [\App\Http\Controllers\AppController::class, 'newsAdd'])->name(name: 'newsAdd');
+
 Route::get('/test', [\App\Http\Controllers\AppController::class, 'test'])->name(name: 'test');
 
 Route::get('/Spp1', [\App\Http\Controllers\AppController::class, 'spp1'])->name(name: 'Spp1');

@@ -1,0 +1,100 @@
+#formInput1 {
+    background-color: #ffffff;
+    width: 60vmin;
+    height: 5vmin;
+    
+    padding: 0.5vmin;
+    border: 0.2vmin solid #AC3232;
+    border-radius: 1vmin;
+    outline: none;
+    border-bottom-left-radius: 1vmin;
+    box-shadow: -0.6vmin -1vmin #AC3232;
+
+    line-height: 2.5vmin;
+    font-size: min(2vmin, 2rem);
+    font-weight: bolder;
+ }
+ #formInput2 {
+    background-color: #ffffff;
+    width: 30vmin;
+    height: 5vmin;
+    
+    padding: 0.5vmin;
+    border: 0.2vmin solid #AC3232;
+    border-radius: 1vmin;
+    outline: none;
+    border-bottom-left-radius: 1vmin;
+    box-shadow: -0.6vmin -1vmin #AC3232;
+
+    line-height: 2.5vmin;
+    font-size: min(2vmin, 2rem);
+    color: #6a6969;
+    font-style: oblique;
+}
+#formInput3 {
+    background-color: #ffffff;
+    width: 60vmin;
+    height: 35vmin;
+    max-height: 35vmin;
+    max-width: 90vmin;
+    
+    padding: 0.5vmin;
+    border: 0.2vmin solid #AC3232;
+    border-radius: 1vmin;
+    outline: none;
+    border-bottom-left-radius: 1vmin;
+    box-shadow: -0.6vmin -1vmin #AC3232;
+
+    line-height: 2.5vmin;
+    font-size: min(2vmin, 2rem);
+
+}
+.check {
+    background-color: #ffffff;
+    width: 30vmin;
+    height: 6vmin;
+    
+    border: 0.2vmin solid #AC3232;
+    border-radius: 1vmin;
+    outline: none;
+    border-bottom-left-radius: 1vmin;
+    box-shadow: -0.6vmin -1vmin #AC3232;
+
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.file {
+    width: 60vmin;
+}
+#formInput4 {
+    background-color: #ffffff;
+    width: 2vmin;
+    height: 2vmin;
+    
+    border: 0.2vmin solid #AC3232;
+    border-radius: 0.5vmin;
+    outline: none;
+    border-bottom-left-radius: 1vmin;
+    box-shadow: -0.1vmin -0.2vmin #AC3232;
+}
+ h2 {
+    line-height: 2.5vmin;
+    font-size: min(2vmin, 2rem);
+    font-weight: bolder;
+ }
+
+ .formSubmit {
+    margin-top: 1vmin;
+    width: 20vmin;
+    background-color: #ffffff;
+    height: 5vmin;
+    font-size: 1.9vmin;
+    padding: 0.5vmin;
+    padding: 0vmin 1vmin;
+    border: 0.2vmin solid #AC3232;
+    border-radius: 1vmin;
+    box-sizing: border-box;
+    cursor: pointer;
+    box-shadow: -0.6vmin -1vmin #AC3232;
+ }
