@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <link href="css/app.css" rel="stylesheet" type="text/css">
     <link href="css/find.css" rel="stylesheet" type="text/css">
-    <title>PromPred</title>
+    <link rel="shortcut icon" href="{{ asset('favicon.png') }}">
+    <title>СПП(Р) РК</title>
 </head>
 
 <body>

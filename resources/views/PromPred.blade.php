@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,8 @@
     <meta name="description" content="Союз промышленников и предпринимателей (работадателей) республики Карелия">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
-    <title>PromPred</title>
+    <link rel="shortcut icon" href="{{ asset('favicon.png') }}">
+    <title>СПП(Р) РК</title>
 </head>
 
 <body>

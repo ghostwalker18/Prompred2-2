@@ -10,7 +10,8 @@
     <link href="css/app.css" rel="stylesheet" type="text/css">
     <link href="css/find.css" rel="stylesheet" type="text/css">
     <link href="css/enter.css" rel="stylesheet" type="text/css">
-    <title>PromPred</title>
+    <link rel="shortcut icon" href="{{ asset('favicon.png') }}">
+    <title>СПП(Р) РК</title>
 </head>
 
 <body>
