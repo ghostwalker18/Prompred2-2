@@ -10,21 +10,21 @@
             <a href="">
                 <li>
                     <div class="triangle"></div>
-                    <a href="/Spp1">Что такое СПП (р) РК?</a>
+                    <a href="/about">Что такое СПП (р) РК?</a>
                 </li>
             </a>
             
             <a href="">
                 <li>
                     <div class="triangle"></div>
-                    <a href="/Spp2">Кто входит в СПП(Р) РК?</a>
+                    <a href="/members">Кто входит в СПП(Р) РК?</a>
                 </li>
             </a>
             
             <a href="">
                 <li>
                     <div class="triangle"></div>
-                    <a href="/Spp3">Деятельность союза</a>
+                    <a href="/activity">Деятельность союза</a>
                 </li>
             </a>
             
@@ -38,42 +38,42 @@
             <a href="">
                 <li>
                     <div class="triangle"></div>
-                    <a href="/Spp4">Социально экономический раздел</a>
+                    <a href="/social">Социально экономический раздел</a>
                 </li>
             </a>
             
             <a href="">
                 <li>
                     <div class="triangle"></div>
-                    <a href="/Spp5">Предложения для членов союза</a>
+                    <a href="/offering">Предложения для членов союза</a>
                 </li>
             </a>
             
             <a href="">
                 <li>
                     <div class="triangle"></div>
-                    <a href="/Spp6">Представительство МСО ПАУ в РК</a>
+                    <a href="/delegation">Представительство МСО ПАУ в РК</a>
                 </li>
             </a>
             
             <a href="">
                 <li>
                     <div class="triangle"></div>
-                    <a href="/Spp7">Конференции, семинары, выставки</a>
+                    <a href="/conferencies">Конференции, семинары, выставки</a>
                 </li>
             </a>
             
             <a href="">
                 <li>
                     <div class="triangle"></div>
-                    <a href="/Spp8">Контакты</a>
+                    <a href="/contacts">Контакты</a>
                 </li>
             </a>
             
             <a href="">
                 <li>
                     <div class="triangle"></div>
-                    <a href="/Spp9">Антикризисная политика</a>
+                    <a href="/policy">Антикризисная политика</a>
                 </li>
             </a>
         </ul>
