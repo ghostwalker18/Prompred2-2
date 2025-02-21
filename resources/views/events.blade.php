@@ -1,16 +1,21 @@
  <aside>
      <div class="events">
+     
          <div class="events-header">
              <h3>Мероприятия</h3>
          </div>
+         
          <div class="events-body">
+         
              <div class="events-date">
                  <?php
                     echo "<h4> $name_month, $year</h4>";
                     ?>
                  <div class="date-deliner"></div>
              </div>
+             
              <table>
+             
                  <thead>
                      <td>пн</td>
                      <td>вт</td>
@@ -20,6 +25,7 @@
                      <td class="weekend">сб</td>
                      <td class="weekend">вс</td>
                  </thead>
+                 
                  <tbody>
                      <?php
                         echo "<tr>";
@@ -57,8 +63,10 @@
                         ?>
                  </tbody>
              </table>
+             
              <div class='events-button'>Все Мероприятия</div>
          </div>
-     </divE
+     </div>
  </aside>
+ 
  <script src="js/appp.js"></script>

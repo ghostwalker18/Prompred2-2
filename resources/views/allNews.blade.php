@@ -12,24 +12,27 @@
     <link href="css/enter.css" rel="stylesheet" type="text/css">
     <link href="css/allNews.css" rel="stylesheet" type="text/css">
     <title>PromPred</title>
-
-
 </head>
 
 <body>
 
     <div class='wrapper'>
+    
         @include('header')
+        
         <div class="page__now">
             <div class="empty"></div>
             <h3>Новости и мероприятия</h3>
             <div class="empty"></div>
         </div>
+        
         <div class="content__wrapper">
             <main>
+            
                 <a class="formSubmit" href="/newsAdd">
                     Добавить
                 </a>
+                
                 <div class="input_wrapper">
                     <div class="adminBlock">
                         <div class="news__1" style="background: none;">
@@ -38,14 +41,17 @@
                                     <p style="margin: 0 2vmin;">Предыдущая</p>
                                     <div class="triangle"></div>
                                 </a>
+                                
                                 <a class="pageControler" style="display: flex;text-decoration:none;" href={{$articles->url(1)}}>
                                     <p>1</p>
                                 </a>
 
                                 <p style="color: white;">...{{$articles->currentPage()}}...</p>
+                                
                                 <a class="pageControler" style="display: flex;text-decoration:none;" href={{$articles->url($articles->lastPage())}}>
                                     <p>{{$articles->lastPage()}}</p>
                                 </a>
+                                
                                 <a class="pageControler" style="display: flex;" href={{$articles->nextPageUrl()}}>
                                     <div class="two triangle"></div>
                                     <p style="margin: 0 2vmin;">Следующая</p>
@@ -70,40 +76,45 @@
                                 echo "</div>";
                             }
                             ?>
+                            
                             <div class="menu">
+                            
                                 <a class="pageControler" style="display: flex; margin: 0 2vmin;" href={{$articles->previousPageUrl()}}>
                                     <p style="margin: 0 2vmin;">Предыдущая</p>
                                     <div class="triangle"></div>
                                 </a>
+                                
                                 <a class="pageControler" style="display: flex;text-decoration:none;" href={{$articles->url(1)}}>
                                     <p>1</p>
                                 </a>
 
                                 <p style="color: white;">...{{$articles->currentPage()}}...</p>
+                                
                                 <a class="pageControler" style="display: flex;text-decoration:none;" href={{$articles->url($articles->lastPage())}}>
                                     <p>{{$articles->lastPage()}}</p>
                                 </a>
+                                
                                 <a class="pageControler" style="display: flex;" href={{$articles->nextPageUrl()}}>
                                     <div class="two triangle"></div>
                                     <p style="margin: 0 2vmin;">Следующая</p>
                                 </a>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </main>
-            <aside></aside>
         </div>
+        
         <footer>
+        
             <div class="ds"><img src="images/garant__logo.png" class="garant"></div>
-            <div class="footer__menu">
-            </div>
+            
+            <div class="footer__menu"></div>
+            
             <div class="petr__1"><img src="images/Petr1.png"></di>
         </footer>
     </div>
+    
     <script src="js/appp.js"></script>
 </body>
-
 </html>

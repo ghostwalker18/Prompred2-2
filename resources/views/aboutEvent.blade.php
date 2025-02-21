@@ -14,6 +14,7 @@
 
 <body>
     <div class="input_wrapper">
+    
         <div class="popupa" id="popupa">
             <h3>О мероприятии</h3>
             <?php
@@ -23,5 +24,4 @@
         </div>
     </div>
 </body>
-
 </html>

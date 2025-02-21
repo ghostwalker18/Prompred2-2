@@ -13,46 +13,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-#Route::get('/PromPred', [\App\Http\Controllers\Controller::class, 'welcome'])->name(name:'welcome');
-
-Route::get('/PromPred', function () {
-    return view('welcome');
-});
-
-
-
-/*Route::get('/', function () {
-    return view('PromPred');
-});*/
-
+#Главная страница
 Route::get('/', [\App\Http\Controllers\AppController::class, 'prompred'])->name(name: 'prompred');
 
+#События
 Route::get('events', [\App\Http\Controllers\AppController::class, 'events'])->name(name: 'events');
-/*Route::get('/Find', function () {
-    return view('Finding');
-});*/
-
 Route::get('/aboutEvent', [\App\Http\Controllers\AppController::class, 'aboutEvent'])->name(name: 'aboutEvent');
+
+#Поиск новостей
 Route::get('/Find', [\App\Http\Controllers\AppController::class, 'find'])->name(name: 'find');
-
-//Route::match(['get', 'post'],'/find_news', [\App\Http\Controllers\AppController::class, 'findNews'])->name(name: 'findNews');
-
 Route::get('/search', [\App\Http\Controllers\AppController::class, 'search'])->name(name: 'search');
 
+#Новости
 Route::get('/showNews/{nameNews}', [\App\Http\Controllers\AppController::class, 'showNews'])->name(name: 'showNews');
-
-/*Route::get('/mailto', function () {
-    return view('MailTo');
-});*/
-
-Route::get('/mailto', [\App\Http\Controllers\AppController::class, 'mailto'])->name(name: 'mailto');
-
-Route::get('/admin', [\App\Http\Controllers\AppController::class, 'adminEnter'])->name(name: 'adminEnter');
-
 Route::get('/allNews', [\App\Http\Controllers\AppController::class, 'allNews'])->name(name: 'allNews');
 Route::get('/newsAdd', [\App\Http\Controllers\AppController::class, 'newsAdd'])->name(name: 'newsAdd');
 
-Route::get('/test', [\App\Http\Controllers\AppController::class, 'test'])->name(name: 'test');
+#Почта
+Route::get('/mailto', [\App\Http\Controllers\AppController::class, 'mailto'])->name(name: 'mailto');
+
+#Админка
+Route::get('/admin', [\App\Http\Controllers\AppController::class, 'adminEnter'])->name(name: 'adminEnter');
 
 Route::get('/Spp1', [\App\Http\Controllers\AppController::class, 'spp1'])->name(name: 'Spp1');
 
@@ -143,13 +124,3 @@ Route::get('/link96', [\App\Http\Controllers\AppController::class, 'link96'])->n
 Route::get('/link97', [\App\Http\Controllers\AppController::class, 'link97'])->name(name: 'link97');
 Route::get('/link98', [\App\Http\Controllers\AppController::class, 'link98'])->name(name: 'link98');
 Route::get('/link99', [\App\Http\Controllers\AppController::class, 'link99'])->name(name: 'link99');
-/* тут менял /PromPred на / тк я отлаживал оффлайн --> 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/PromPred', function () {
-    return view('PromPred');
-});
-
-*/

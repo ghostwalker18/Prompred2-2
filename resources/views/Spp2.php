@@ -1,16 +1,6 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <!DOCTYPE html>
-    <html lang="en">
 
     <head>
         <meta charset="UTF-8">
@@ -20,23 +10,26 @@
         <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
         <link href="css/app.css" rel="stylesheet" type="text/css">
         <title>PromPred</title>
-
-
     </head>
 
     <body>
-        <div class="popupa-wrapper off-wrap" id="popupa-wrapper">
+        <div class="popupa-wrapper off-wrap" id="popupa-wrapper"></div>
 
-        </div>
         <div class='wrapper'>
+
             <?php include('header.blade.php'); ?>
+
             <div class="page__now">
+
                 <?php include('toggle.blade.php'); ?>
 
                 <h3>Состав СПП (р) РК</h3>
+
                 <div class="empty"></div>
             </div>
+
             <div class="content__wrapper">
+
                 <?php include('navbar.blade.php'); ?>
 
                 <main>
@@ -250,25 +243,18 @@
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
-
-
-
-
-
-
-                        <!--страницы-->
-
                     </td>
                 </main>
-                <div class='modal' id='x1'>
-                </div>
+
+                <div class='modal' id='x1'></div>
+
                 <?php include('events.blade.php'); ?>
             </div>
+
             <?php include('svg.blade.php'); ?>
+
             <script src="js/appp.js"></script>
+
             <script src="js/events.js"></script>
-
-
     </body>
-
-    </html>
+</html>

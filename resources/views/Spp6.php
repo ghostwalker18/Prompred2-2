@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <!DOCTYPE html>
-    <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,32 +9,37 @@
         <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
         <link href="css/app.css" rel="stylesheet" type="text/css">
         <title>PromPred</title>
-
-
     </head>
 
     <body>
-        <div class="popupa-wrapper off-wrap" id="popupa-wrapper">
 
-        </div>
+        <div class="popupa-wrapper off-wrap" id="popupa-wrapper"></div>
+
         <div class='wrapper'>
+
             <?php include('header.blade.php'); ?>
+
             <div class="page__now">
+
                 <?php include('toggle.blade.php'); ?>
 
                 <h3>Представительство МСО ПАУ в РК</h3>
+
                 <div class="empty"></div>
             </div>
+
             <div class="content__wrapper">
+
                 <?php include('navbar.blade.php'); ?>
+
                 <main>
                     <td rowspan="2" background="/support/images/bg_center.gif">
 
                         Обсудить проблемы своего бизнеса вы можете с Президентом Союза промышленников и предпринимателей (работодателей) Республики Карелия Юрием Пономаревым, предварительно договорившись о встрече по телефону (814 2) 77 28 64.
 
                         <!--название подраздела (если есть, если нет - сразу же начинается текст)-->
-                        <p class="main">
-                        </p>
+                        <p class="main"></p>
+
                         <p class="main">
 
                             <b><a href="/article/804" class="nl">Уважаемые работодатели!</a></b>
@@ -111,14 +105,12 @@
 
                             <b><a href="/article/577" class="nl">ОБРАЩЕНИЕ РЕСПУБЛИКАНСКОЙ ТРЕХСТОРОННЕЙ КОМИССИИ ПО РЕГУЛИРОВАНИЮ СОЦИАЛЬНО-ТРУДОВЫХ ОТНОШЕНИЙ К РУКОВОДИТЕЛЯМ ПРЕДПРИЯТИЙ, ОРГАНИЗАЦИЙ, ИНДИВИДУАЛЬНЫМ ПРЕДПРИНИМАТЕЛЯМ РЕСПУБЛИКИ КАРЕЛИЯ</a></b>
 
-
                             <br><br>
                         </p>
 
                         <p class="main">
 
                             <b><a href="/article/514" class="nl">Опрос по проблемам, связанным с последствиями экономического кризиса</a></b>
-
 
                             <br><br>
                         </p>
@@ -127,14 +119,12 @@
 
                             <b><a href="/article/477" class="nl">Предложения Российско-американского бизнес-диалога к программе действий на американском направлении</a></b>
 
-
                             <br><br>
                         </p>
 
                         <p class="main">
 
                             <b><a href="/article/474" class="nl">Руководителям компаний</a></b>
-
 
                             <br><br>
                         </p>
@@ -143,26 +133,22 @@
 
                             <b><a href="/article/449" class="nl">Информация для работодателей</a></b>
 
-
                             <br><br>
                         </p>
 
-
-
-
-                        <!--страницы-->
                         <div align="right"><span class="act">Страницы: </span><span class="act">1</span>&nbsp; <a href="?page=1" class="rl">2</a>&nbsp; <a href="?page=2" class="rl">3</a>&nbsp; </div><br><br>
                     </td>
                 </main>
-                <div class='modal' id='x1'>
-                </div>
+
+                <div class='modal' id='x1'></div>
+
                 <?php include('events.blade.php'); ?>
             </div>
+
             <?php include('svg.blade.php'); ?>
+
             <script src="js/appp.js"></script>
+
             <script src="js/events.js"></script>
-
-
     </body>
-
-    </html>
+</html>  

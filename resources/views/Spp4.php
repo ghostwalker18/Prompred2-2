@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <!DOCTYPE html>
-    <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,33 +14,31 @@
     </head>
 
     <body>
-        <div class="popupa-wrapper off-wrap" id="popupa-wrapper">
-
-        </div>
+        <div class="popupa-wrapper off-wrap" id="popupa-wrapper"></div>
+        
         <div class='wrapper'>
+
             <?php include('header.blade.php'); ?>
+
             <div class="page__now">
+
                 <?php include('toggle.blade.php'); ?>
 
                 <h3>Социально экономический раздел</h3>
+
                 <div class="empty"></div>
             </div>
+
             <div class="content__wrapper">
+
                 <?php include('navbar.blade.php'); ?>
+
                 <main>
                     <td rowspan="2" background="/support/images/bg_center.gif">
 
                         <!--название подраздела (если есть, если нет - сразу же начинается текст)-->
-                        <p class="main">
+                        <p class="main"></p>
 
-
-
-
-
-
-
-
-                        </p>
                         <p class="main">
 
                             <b><a href="link51" class="nl">Соглашение о минимальной заработной плате.</a></b>
@@ -106,27 +93,21 @@
 
                             <b><a href="link56" class="nl">Большие задачи малого бизнеса</a></b>
 
-
                             <br><br>
                         </p>
-
-
-
-
-                        <!--страницы-->
-
                     </td>
                 </main>
-                <div class='modal' id='x1'>
-                </div>
+
+                <div class='modal' id='x1'></div>
+
                 <?php include('events.blade.php'); ?>
 
             </div>
+
             <?php include('svg.blade.php'); ?>
+
             <script src="js/appp.js"></script>
+
             <script src="js/events.js"></script>
-
-
     </body>
-
-    </html>
+</html>

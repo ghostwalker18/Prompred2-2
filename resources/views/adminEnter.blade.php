@@ -11,19 +11,20 @@
     <link href="css/find.css" rel="stylesheet" type="text/css">
     <link href="css/enter.css" rel="stylesheet" type="text/css">
     <title>PromPred</title>
-
-
 </head>
 
 <body>
 
     <div class='wrapper'>
+    
         @include('header')
+        
         <div class="page__now">
             <div class="empty"></div>
             <h3>Вход</h3>
             <div class="empty"></div>
         </div>
+        
         <div class="content__wrapper">
             <main>
                 <div class="input_wrapper">
@@ -35,17 +36,20 @@
                         </form>
                     </div>
                 </div>
-            </main>
-            <aside></aside>
+            </main>     
         </div>
+        
         <footer>
             <div class="ds"><img src="images/garant__logo.png" class="garant"></div>
-            <div class="footer__menu">
+            
+            <div class="footer__menu"></div>
+            
+            <div class="petr__1">
+            	<img src="images/Petr1.png">
             </div>
-            <div class="petr__1"><img src="images/Petr1.png"></di>
         </footer>
     </div>
+    
     <script src="js/appp.js"></script>
 </body>
-
 </html>
