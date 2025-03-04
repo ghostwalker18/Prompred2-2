@@ -6,7 +6,6 @@
 
     <div class="nav__main">
         <ul>
-        
             <a href="">
                 <li>
                     <div class="triangle"></div>

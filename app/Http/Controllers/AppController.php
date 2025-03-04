@@ -3,14 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
-
 use Illuminate\Pagination\LengthAwarePaginator;
-
 use Illuminate\Http\Request;
-
 use App\Models\Article;
-
 use WithPagination;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller as BaseController;
 
 function getMyDataForEvents($countOfPagination)
 {
@@ -46,13 +45,14 @@ function getMyDataForEvents($countOfPagination)
     return $info;
 }
 
-class AppController extends Controller
+class AppController extends BaseController
 {
 
     public function find()
     {
         return view('Finding', getMyDataForEvents(6));
     }
+    
     public function aboutEvent(Request $request)
     {
         $date = $request->date;
@@ -92,28 +92,27 @@ class AppController extends Controller
         $events = DB::table('article')->where('a_date', '>=', "$year-$month-1")->where('a_date', '<=', "$year-$month-30")->pluck('a_date')->toArray();;
         $info = array('articles' => $articles, 'year' => $year, 'name_month' => $name_month, 'month' => $month, 'events' => $events);
 
-        return view('PromPred', $info);
+        return view('HomePage', $info);
     }
 
-    public function welcome()
-    {
-        return view('welcome');
-    }
     public function adminEnter()
     {
         return view('adminEnter');
     }
+    
     public function allNews()
     {
         return view('allNews', getMyDataForEvents(3));
     }
+    
     public function newsAdd()
     {
         return view('newsAdd', getMyDataForEvents(3));
     }
-    public function prompred()
+    
+    public function homePage()
     {
-        return view('PromPred', getMyDataForEvents(6));
+        return view('HomePage', getMyDataForEvents(6));
     }
 
     public function mailto()
@@ -121,64 +120,73 @@ class AppController extends Controller
         return view('MailTo', getMyDataForEvents(6));
     }
 
-    public function spp1()
+    public function about()
     {
 
-        return view('Spp1', getMyDataForEvents(6));
+        return view('About', getMyDataForEvents(6));
     }
 
-    public function spp2()
+    public function members()
     {
-
-        return view('Spp2', getMyDataForEvents(6));
+        return view('Members', getMyDataForEvents(6));
     }
 
-    public function spp3()
+    public function activity()
     {
-        return view('Spp3', getMyDataForEvents(6));
+        return view('Activity', getMyDataForEvents(6));
     }
 
-    public function spp4()
+    public function social()
     {
-        return view('Spp4', getMyDataForEvents(6));
+        return view('Social', getMyDataForEvents(6));
     }
-    public function spp5()
+    
+    public function offering()
     {
-        return view('Spp5', getMyDataForEvents(6));
+        return view('Offering', getMyDataForEvents(6));
     }
-    public function spp6()
+    
+    public function delegation()
     {
-        return view('Spp6', getMyDataForEvents(6));
+        return view('Delegation', getMyDataForEvents(6));
     }
-    public function spp7()
+    
+    public function conferencies()
     {
-        return view('Spp7', getMyDataForEvents(6));
+        return view('Conferencies', getMyDataForEvents(6));
     }
-    public function spp8()
+    
+    public function contacts()
     {
-        return view('Spp8', getMyDataForEvents(6));
+        return view('Contacts', getMyDataForEvents(6));
     }
-    public function spp9()
+    
+    public function policy()
     {
-        return view('Spp9', getMyDataForEvents(6));
+        return view('Policy', getMyDataForEvents(6));
     }
+    
     //  контроллеры ссылок подвального уровня
     public function link11()
     {
         return view('Spp1-links/link1', getMyDataForEvents(6));
     }
+    
     public function link12()
     {
         return view('Spp1-links/link2', getMyDataForEvents(6));
     }
+    
     public function link111()
     {
         return view('Spp1-links/Spp1-link1-links/link1', getMyDataForEvents(6));
     }
+    
     public function link112()
     {
         return view('Spp1-links/Spp1-link1-links/link2', getMyDataForEvents(6));
     }
+    
     public function link113()
     {
         return view('Spp1-links/Spp1-link1-links/link3', getMyDataForEvents(6));
@@ -188,10 +196,12 @@ class AppController extends Controller
     {
         return view('Spp1-links/Spp1-link2-links/link1', getMyDataForEvents(6));
     }
+    
     public function link122()
     {
         return view('Spp1-links/Spp1-link2-links/link2', getMyDataForEvents(6));
     }
+    
     public function link123()
     {
         return view('Spp1-links/Spp1-link2-links/link3', getMyDataForEvents(6));
@@ -206,82 +216,102 @@ class AppController extends Controller
     {
         return view('Spp3-links/link1', getMyDataForEvents(6));
     }
+    
     public function link32()
     {
         return view('Spp3-links/link2', getMyDataForEvents(6));
     }
+    
     public function link33()
     {
         return view('Spp3-links/link3', getMyDataForEvents(6));
     }
+   
     public function link34()
     {
         return view('Spp3-links/link4', getMyDataForEvents(6));
     }
+    
     public function link35()
     {
         return view('Spp3-links/link5', getMyDataForEvents(6));
     }
+    
     public function link36()
     {
         return view('Spp3-links/link6', getMyDataForEvents(6));
     }
+    
     public function link37()
     {
         return view('Spp3-links/link7', getMyDataForEvents(6));
     }
+    
     public function link311()
     {
         return view('Spp3-links/Spp3-link1-links/link1', getMyDataForEvents(6));
     }
+    
     public function link312()
     {
         return view('Spp3-links/Spp3-link1-links/link2', getMyDataForEvents(6));
     }
+    
     public function link313()
     {
         return view('Spp3-links/Spp3-link1-links/link3', getMyDataForEvents(6));
     }
+    
     public function link314()
     {
         return view('Spp3-links/Spp3-link1-links/link4', getMyDataForEvents(6));
     }
+    
     public function link315()
     {
         return view('Spp3-links/Spp3-link1-links/link5', getMyDataForEvents(6));
     }
+    
     public function link316()
     {
         return view('Spp3-links/Spp3-link1-links/link6', getMyDataForEvents(6));
     }
+    
     public function link317()
     {
         return view('Spp3-links/Spp3-link1-links/link7', getMyDataForEvents(6));
     }
+    
     public function link318()
     {
         return view('Spp3-links/Spp3-link1-links/link8', getMyDataForEvents(6));
     }
+    
     public function link51()
     {
         return view('Spp5-links/link1', getMyDataForEvents(6));
     }
+    
     public function link52()
     {
         return view('Spp5-links/link2', getMyDataForEvents(6));
     }
+    
     public function link53()
     {
         return view('Spp5-links/link3', getMyDataForEvents(6));
     }
+    
     public function link54()
     {
         return view('Spp5-links/link4', getMyDataForEvents(6));
     }
+    
     public function link55()
     {
         return view('Spp5-links/link5', getMyDataForEvents(6));
     }
+    
     public function link56()
     {
         return view('Spp5-links/link6', getMyDataForEvents(6));
@@ -291,22 +321,27 @@ class AppController extends Controller
     {
         return view('Spp6-links/link1', getMyDataForEvents(6));
     }
+    
     public function link62()
     {
         return view('Spp6-links/link2', getMyDataForEvents(6));
     }
+    
     public function link63()
     {
         return view('Spp6-links/link3', getMyDataForEvents(6));
     }
+    
     public function link64()
     {
         return view('Spp6-links/link4', getMyDataForEvents(6));
     }
+    
     public function link65()
     {
         return view('Spp6-links/link5', getMyDataForEvents(6));
     }
+    
     public function link66()
     {
         return view('Spp6-links/link6', getMyDataForEvents(6));
@@ -316,40 +351,46 @@ class AppController extends Controller
     {
         return view('Spp7-links/link1', getMyDataForEvents(6));
     }
+    
     public function link72()
     {
         return view('Spp7-links/link2', getMyDataForEvents(6));
     }
+    
     public function link73()
     {
         return view('Spp7-links/link3', getMyDataForEvents(6));
     }
+    
     public function link74()
     {
         return view('Spp7-links/link4', getMyDataForEvents(6));
     }
+    
     public function link75()
     {
         return view('Spp7-links/link5', getMyDataForEvents(6));
     }
+    
     public function link76()
     {
         return view('Spp7-links/link6', getMyDataForEvents(6));
     }
+    
     public function link77()
     {
         return view('Spp7-links/link7', getMyDataForEvents(6));
     }
+    
     public function link78()
     {
         return view('Spp7-links/link8', getMyDataForEvents(6));
     }
+    
     public function link79()
     {
         return view('Spp7-links/link9', getMyDataForEvents(6));
     }
-
-
 
     public function link91()
     {
@@ -359,30 +400,37 @@ class AppController extends Controller
     {
         return view('Spp9-links/link2', getMyDataForEvents(6));
     }
+    
     public function link93()
     {
         return view('Spp9-links/link3', getMyDataForEvents(6));
     }
+    
     public function link94()
     {
         return view('Spp9-links/link4', getMyDataForEvents(6));
     }
+    
     public function link95()
     {
         return view('Spp9-links/link5', getMyDataForEvents(6));
     }
+    
     public function link96()
     {
         return view('Spp9-links/link6', getMyDataForEvents(6));
     }
+    
     public function link97()
     {
         return view('Spp9-links/link7', getMyDataForEvents(6));
     }
+    
     public function link98()
     {
         return view('Spp9-links/link8', getMyDataForEvents(6));
     }
+    
     public function link99()
     {
         return view('Spp9-links/link9', getMyDataForEvents(6));

@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 #Главная страница
-Route::get('/', [\App\Http\Controllers\AppController::class, 'prompred'])->name(name: 'prompred');
+Route::get('/', [\App\Http\Controllers\AppController::class, 'homepage'])->name(name: 'homepage');
 
 #События
 Route::get('events', [\App\Http\Controllers\AppController::class, 'events'])->name(name: 'events');
@@ -35,23 +35,24 @@ Route::get('/mailto', [\App\Http\Controllers\AppController::class, 'mailto'])->n
 #Админка
 Route::get('/admin', [\App\Http\Controllers\AppController::class, 'adminEnter'])->name(name: 'adminEnter');
 
-Route::get('/about', [\App\Http\Controllers\AppController::class, 'spp1'])->name(name: 'Spp1');
+#Навигационная панель
+Route::get('/about', [\App\Http\Controllers\AppController::class, 'about'])->name(name: 'about');
 
-Route::get('/members', [\App\Http\Controllers\AppController::class, 'spp2'])->name(name: 'Spp2');
+Route::get('/members', [\App\Http\Controllers\AppController::class, 'members'])->name(name: 'members');
 
-Route::get('/activity', [\App\Http\Controllers\AppController::class, 'spp3'])->name(name: 'Spp3');
+Route::get('/activity', [\App\Http\Controllers\AppController::class, 'activity'])->name(name: 'activity');
 
-Route::get('/social', [\App\Http\Controllers\AppController::class, 'spp4'])->name(name: 'Spp4');
+Route::get('/social', [\App\Http\Controllers\AppController::class, 'social'])->name(name: 'social');
 
-Route::get('/offering', [\App\Http\Controllers\AppController::class, 'spp5'])->name(name: 'spp5');
+Route::get('/offering', [\App\Http\Controllers\AppController::class, 'offering'])->name(name: 'offering');
 
-Route::get('/delegation', [\App\Http\Controllers\AppController::class, 'spp6'])->name(name: 'spp6');
+Route::get('/delegation', [\App\Http\Controllers\AppController::class, 'delegation'])->name(name: 'delegation');
 
-Route::get('/conferencies', [\App\Http\Controllers\AppController::class, 'spp7'])->name(name: 'spp7');
+Route::get('/conferencies', [\App\Http\Controllers\AppController::class, 'conferencies'])->name(name: 'conferencies');
 
-Route::get('/contacts', [\App\Http\Controllers\AppController::class, 'spp8'])->name(name: 'spp8');
+Route::get('/contacts', [\App\Http\Controllers\AppController::class, 'contacts'])->name(name: 'contacts');
 
-Route::get('/policy', [\App\Http\Controllers\AppController::class, 'spp9'])->name(name: 'spp9');
+Route::get('/policy', [\App\Http\Controllers\AppController::class, 'policy'])->name(name: 'policy');
 
 // роуты подвального уровня (1.1)
 
