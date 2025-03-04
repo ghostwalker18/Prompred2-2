@@ -68,7 +68,7 @@ class AppController extends BaseController
 
     public function showNews(Request $request, $nameNews)
     {
-        return view('HomePage', getMyDataForEvents(6, $nameNews);
+        return view('HomePage', getMyDataForEvents(6, $nameNews));
     }
 
     public function adminEnter()
