@@ -45,9 +45,9 @@
                         </p>
                         <p class="div">
 
-                            <img border="0" src="/support/images/sd.gif" width="13" height="12" align="absmiddle"><a href="link11" class="nl">Организационная структура</a>
+                            <<a href="link11" class="nl">Организационная структура</a>
 
-                            <img border="0" src="/support/images/sd.gif" width="13" height="12" align="absmiddle"><a href="link12" class="nl">Документы</a><br>
+                            <a href="link12" class="nl">Документы</a><br>
 
                             <br>
                         </p>

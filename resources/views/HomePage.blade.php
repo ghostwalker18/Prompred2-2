@@ -56,7 +56,7 @@
                 
                 @include('goToPage')
                 
-                <div class="petr_1">
+                <div class="petr__1">
                 	<img src="{{ asset('images/Petr1.png') }}" class="garant">
                 </div>
             </footer>
