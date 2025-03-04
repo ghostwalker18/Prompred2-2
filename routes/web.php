@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 #Главная страница
 Route::get('/', [\App\Http\Controllers\AppController::class, 'homepage'])->name(name: 'homepage');
+Route::get('/home', [\App\Http\Controllers\AppController::class, 'homepage'])->name(name: 'homepage');
+Route::get('/goToPage', [\App\Http\Controllers\AppController::class, 'gotopage']) -> name(name: 'gotopage');
 
 #События
 Route::get('events', [\App\Http\Controllers\AppController::class, 'events'])->name(name: 'events');

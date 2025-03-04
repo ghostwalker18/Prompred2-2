@@ -11,19 +11,14 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 
-function getMyDataForEvents($countOfPagination)
-{
-    $articles = Article::query()->paginate($countOfPagination, ['a_date', 'a_text', 'a_title']);
-
-    //$dates = Article::query()->where()
-    //$date = DB::select("select CURRENT_DATE() as DATE");
-
-    //$currentDate = date("d.m.Y");
-
+function getMyDataForEvents($countOfPagination, $keyword = null)
+{ 
+    if(isset($keyword))
+        $articles = Article::where("a_title", "LIKE", "%" . $keyword . "%")->paginate($perPage = $countOfPagination, $columns = ['a_date', 'a_text', 'a_title']);
+    else
+        $articles = Article::query()->paginate($countOfPagination, ['a_date', 'a_text', 'a_title']);
     $year = date("Y");
-
     $day = date("w", mktime(0, 0, 0, date("m"), date("d"), date("Y")));
-
     $month = date("n");
 
     $monthes = array(
@@ -47,11 +42,16 @@ function getMyDataForEvents($countOfPagination)
 
 class AppController extends BaseController
 {
-
+    public function goToPage(Request $request)
+    {
+    	return redirect()->to('/?page='.$request->input('pageNumber'));
+    }
+    
     public function find()
     {
         return view('Finding', getMyDataForEvents(6));
     }
+    
     
     public function aboutEvent(Request $request)
     {
@@ -68,31 +68,7 @@ class AppController extends BaseController
 
     public function showNews(Request $request, $nameNews)
     {
-
-        $articles = Article::where("a_title", "LIKE", "%" . $nameNews . "%")->paginate($perPage = 6, $columns = ['a_date', 'a_text', 'a_title']);
-        //$articles2 = DB::table('article')->where("a_title", "LIKE", "%". $request->input('text') . "%")->get();
-
-
-        $year = date("Y");
-
-        $day = date("w", mktime(0, 0, 0, date("m"), date("d"), date("Y")));
-
-        $month = date("n");
-
-        $monthes = array(
-            1 => 'Январь', 2 => 'Февраль', 3 => 'Март',
-            4 => 'Апрель', 5 => 'Май', 6 => 'Июнь',
-            7 => 'Июль', 8 => 'Август', 9 => 'Сентябрь',
-            10 => 'Октябрь', 11 => 'Ноябрь',
-            12 => 'Декабрь'
-        );
-        // получаем название месяца из массива
-        $name_month = $monthes[$month];
-
-        $events = DB::table('article')->where('a_date', '>=', "$year-$month-1")->where('a_date', '<=', "$year-$month-30")->pluck('a_date')->toArray();;
-        $info = array('articles' => $articles, 'year' => $year, 'name_month' => $name_month, 'month' => $month, 'events' => $events);
-
-        return view('HomePage', $info);
+        return view('HomePage', getMyDataForEvents(6, $nameNews);
     }
 
     public function adminEnter()
