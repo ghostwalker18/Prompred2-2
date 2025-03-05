@@ -73,7 +73,12 @@ class AppController extends BaseController
 
     public function adminEnter()
     {
-        return view('adminEnter');
+        return view('AdminEnter');
+    }
+   
+    public function adminDashboard()
+    {
+    	return view('AdminDashboard');
     }
     
     public function allNews()

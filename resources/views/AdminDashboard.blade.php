@@ -15,7 +15,6 @@
 </head>
 
 <body>
-
     <div class='wrapper'>
     
         @include('header')
@@ -28,15 +27,7 @@
         
         <div class="content__wrapper">
             <main>
-                <div class="input_wrapper">
-                    <div class="enterForm">
-                        <form method="" action="/Enter" id="eForm">
-                            <input type="text" name="login" placeholder="Логин" id="formInput">
-                            <input type="password" name="password" placeholder="Пароль" id="formInput">
-                            <button class="formSubmit" type="submit">Войти</button>
-                        </form>
-                    </div>
-                </div>
+		<p>You are welcome</p>
             </main>     
         </div>
         
@@ -50,7 +41,6 @@
             </div>
         </footer>
     </div>
-    
     <script src="js/appp.js"></script>
 </body>
 </html>

@@ -29,13 +29,15 @@ Route::get('/search', [\App\Http\Controllers\AppController::class, 'search'])->n
 #Новости
 Route::get('/showNews/{nameNews}', [\App\Http\Controllers\AppController::class, 'showNews'])->name(name: 'showNews');
 Route::get('/allNews', [\App\Http\Controllers\AppController::class, 'allNews'])->name(name: 'allNews');
-Route::get('/newsAdd', [\App\Http\Controllers\AppController::class, 'newsAdd'])->name(name: 'newsAdd');
 
 #Почта
 Route::get('/mailto', [\App\Http\Controllers\AppController::class, 'mailto'])->name(name: 'mailto');
 
 #Админка
-Route::get('/admin', [\App\Http\Controllers\AppController::class, 'adminEnter'])->name(name: 'adminEnter');
+Route::get('/login', [\App\Http\Controllers\AppController::class, 'adminEnter'])->name(name: 'adminEnter');
+Route::get('/authenticateAdmin', [\App\Http\Controllers\LoginController::class, 'authenticateAdmin'])->name(name: 'authenticateAdmin');
+Route::get('/admin', [\App\Http\Controllers\AppController::class, 'adminDashboard'])->middleware('auth')->name(name: 'adminDashboard');
+Route::get('/addNews', [\App\Http\Controllers\AppController::class, 'newsAdd'])->middleware('auth')->name(name: 'addNews');
 
 #Навигационная панель
 Route::get('/about', [\App\Http\Controllers\AppController::class, 'about'])->name(name: 'about');
