@@ -55,6 +55,7 @@ header {
     width: 98vw;
     display: flex;
     justify-content: end;
+    align-items: center;
     margin-left: auto;
     z-index: 324234;
 }

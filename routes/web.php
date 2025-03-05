@@ -35,9 +35,11 @@ Route::get('/mailto', [\App\Http\Controllers\AppController::class, 'mailto'])->n
 
 #Админка
 Route::get('/login', [\App\Http\Controllers\AppController::class, 'adminEnter'])->name(name: 'adminEnter');
+Route::get('/logout', [\App\Http\Controllers\LoginController::class, 'logoutAdmin'])->name(name: 'logoutAdmin');
 Route::get('/authenticateAdmin', [\App\Http\Controllers\LoginController::class, 'authenticateAdmin'])->name(name: 'authenticateAdmin');
 Route::get('/admin', [\App\Http\Controllers\AppController::class, 'adminDashboard'])->middleware('auth')->name(name: 'adminDashboard');
 Route::get('/addNews', [\App\Http\Controllers\AppController::class, 'newsAdd'])->middleware('auth')->name(name: 'addNews');
+Route::post('/publishNews', [\App\Http\Controllers\AppController::class, 'publishNews'])->middleware('auth')->name(name: 'publishNews');
 
 #Навигационная панель
 Route::get('/about', [\App\Http\Controllers\AppController::class, 'about'])->name(name: 'about');

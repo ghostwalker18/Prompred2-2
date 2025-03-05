@@ -91,6 +91,16 @@ class AppController extends BaseController
         return view('newsAdd', getMyDataForEvents(3));
     }
     
+    public function publishNews(Request $request)
+    {
+    	$news = $request->validate([
+            'NewsName' => ['required'],
+            'NewsDate' => ['required'],
+            'NewsContent' => ['required']
+        ]);
+        return redirect()->to('/admin');
+    }
+    
     public function homePage()
     {
         return view('HomePage', getMyDataForEvents(6));

@@ -21,13 +21,14 @@
         
         <div class="page__now">
             <div class="empty"></div>
-            <h3>Вход</h3>
+            <h3>Панель администрирования</h3>
             <div class="empty"></div>
         </div>
         
         <div class="content__wrapper">
-            <main>
-		<p>You are welcome</p>
+            <main style="display:flex; flex-direction: column; align-items: center; height: 100%">
+		<h3 style="padding: 10px;"><a style="font-size: x-large" href="/addNews">Выложить новость</a></h3>
+		<h3 style="padding: 10px;"><a style="font-size: x-large" href="/changeAdminPassword">Сменить пароль</a></h3>
             </main>     
         </div>
         

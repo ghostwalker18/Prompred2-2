@@ -31,7 +31,7 @@
                 <main>
                     <div class="input_wrapper">
                         <div class="adminBlock">
-                            <form method="" action="#" id="addForm">
+                            <form method="post" action="publishNews" id="addForm">
                             
                                 <h2>Название</h2>
                                 
