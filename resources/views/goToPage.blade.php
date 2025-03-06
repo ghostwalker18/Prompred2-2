@@ -11,7 +11,7 @@
         }
     </script>
 
-    <form id="pagerForm" form-method = "" action = "/goToPage" style="display:flex: flex-direction: column; background-color: #FFF; border:thick solid #B81D1F; padding: 10px; visibility: hidden">
+    <form id="pagerForm" form-method = "" action = "/goToPage">
 
         <p style="padding-bottom: 10px">Укажите страницу:</p>
 
