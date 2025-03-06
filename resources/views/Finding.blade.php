@@ -4,7 +4,8 @@
     @include('head')
 
     <body>
-
+	<link href="{{ asset('css/find.css') }}" rel="stylesheet" type="text/css">
+	
         <div class='wrapper'>
             @include('header')
             <div class="page__now">

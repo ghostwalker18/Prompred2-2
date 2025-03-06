@@ -4,6 +4,8 @@
     @include('head')
 
     <body>
+    
+    	<link href="{{ asset('css/enter.css') }}" rel="stylesheet" type="text/css">
 
         <div class='wrapper'>
         

@@ -4,14 +4,19 @@
     @include('head')
 
     <body>
+    
+    	<link href="{{ asset('css/add.css') }}" rel="stylesheet" type="text/css">
 
         <div class='wrapper'>
         
             @include('header')
             
             <div class="page__now">
+            
                 <div class="empty"></div>
-                <h3>Новости и мероприятия</h3>
+                
+                <h3>Добавить новость</h3>
+                
                 <div class="empty"></div>
             </div>
             
